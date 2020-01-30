@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CountryService } from 'src/app/services/country/country.service';
+import { CountryService } from '../../services/country/country.service';
 import { finalize } from 'rxjs/operators';
 
 @Component({
