@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Training } from 'src/app/model/training';
+import { Training } from '../../model/training';
 
 @Component({
   selector: 'app-table-data',
