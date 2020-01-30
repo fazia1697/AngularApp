@@ -1,6 +1,6 @@
 import { Component, OnInit ,OnDestroy } from '@angular/core';
 import { Observable, Subject,interval } from 'rxjs';
-import { MovieService } from 'src/app/services/movie/movie.service';
+import { MovieService } from '../../services/movie/movie.service';
 import { takeUntil, map, shareReplay, tap, distinctUntilChanged } from 'rxjs/operators';
 import { error } from 'protractor';
 
