@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TrainingService } from 'src/app/services/training/training.service';
+import { TrainingService } from '../../services/training/training.service';
 
 @Component({
   selector: 'app-count',
