@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">voir Films </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Série</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Films
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">comedies</a>
+            <a class="dropdown-item" href="#">romantic films</a>
+            <a class="dropdown-item" href="#">adventure films</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Autres</a>
+          </div>
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Se Connecter</button>
+      </form>
+    </div>
+  </nav>
+  <!----------------------------------------------okk- -->
+  <div>
+    <button (click)="getData()">Get Data</button>
+  </div>
+  
+  
+  <div class="container">
+      
+  
+      <input type="radio" id="i1" name="images" checked/>
+      <input type="radio" id="i2" name="images" />
+      <input type="radio" id="i3" name="images" />
+      <input type="radio" id="i4" name="images"  />
+      
+      <div class="slide_img" id="one" *ngFor="let f of data?.results; let i =index">			
+              
+              <img *ngIf="i==3"  src="https://image.tmdb.org/t/p/w185/{{f.poster_path}}">
+              
+                  <label class="prev" for="i4"><span></span></label>
+                  <label class="next" for="i2"><span></span></label>	
+        
+      </div>
+      
+      <div class="slide_img" id="two"*ngFor="let f of data?.results; let i =index" >
+          
+              <img *ngIf="i==5" src="https://image.tmdb.org/t/p/w185/{{f.poster_path}}" >
+              
+                  <label class="prev" for="i1"><span></span></label>
+                  <label class="next" for="i3"><span></span></label>
+          
+      </div>
+              
+      <div class="slide_img" id="three" *ngFor="let f of data?.results; let i =index" >
+              <img *ngIf="i==2" src="https://image.tmdb.org/t/p/w185/{{f.poster_path}}">	
+              
+                  <label class="prev" for="i2"><span></span></label>
+                  <label class="next" for="i4"><span></span></label>
+      </div>
+  
+  
+      <div class="slide_img" id="four" *ngFor="let f of data?.results; let i = index">
+              <img *ngIf="1" src="https://image.tmdb.org/t/p/w185/{{f.poster_path}}">	
+              
+                  <label class="prev" for="i3"><span></span></label>
+                  <label class="next" for="i1"><span></span></label>
+  
+      </div>
+  
+      <div id="nav_slide">
+          <label for="i1" class="dots" id="dot1"></label>
+          <label for="i2" class="dots" id="dot2"></label>
+          <label for="i3" class="dots" id="dot3"></label>
+          <label for="i4" class="dots" id="dot4"></label>
+      </div>
+          
+  </div>
+  
+  
+  
+  
+  
+  <div  class="para"><h2 ><B>Films Box</B></h2></div>
+    <div id="divbox">
+  
+    
+      <div  *ngFor="let f of data?.results">
+      <img src="https://image.tmdb.org/t/p/w185/{{f.poster_path}}"/>
+      <b>{{f.title}}</b>
+      <p>{{f.overview}}</p>
+      </div>
+      
+      </div>
+

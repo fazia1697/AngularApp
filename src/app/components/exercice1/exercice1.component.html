@@ -1,0 +1,30 @@
+
+<html>
+	<body>
+	<div class="para cadre"><h1>horloge analogique</h1></div>
+	  <article class="clock">
+	  
+		<div class="hours-container">
+		  <div class="hours" [style.transform]="'rotate(' + (heurDegr$|async) + 'deg)'"></div>
+		</div>
+		<div class="minutes-container">
+		  <div class="minutes"[style.transform]="'rotate(' + (minDegr$|async) + 'deg)'"></div>
+		</div>
+		<div class="seconds-container">
+		  <div class="seconds"  [style.transform]="'rotate(' + (secDegr$|async) + 'deg)'"></div>
+		</div>
+		<div class="center-circle"></div>
+	  </article>
+	  
+	  
+	  
+	  
+	  <h1>
+	  <b class="para cadre">il est  :	{{heur$|async}} : {{min$|async}} : {{sec$|async}}</b>
+	  </h1>
+	  
+	  
+	
+	</body>
+	
+	</html>
